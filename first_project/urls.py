@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 from first_app import views
+from basicapp import views
 
 urlpatterns = [
     path('', views.index, name='index'),
     path('first_app', include('first_app.urls')),
+    path('form-page', views.form_name_view, name='form_name'),
     path('admin/', admin.site.urls),
 ]
